@@ -21,13 +21,16 @@ $connection = mysqli_connect("localhost", "root", "", "bits-board");
 
 // SQL query to fetch information of registerd users and finds user match.
 
-$query = mysqli_query("select * from login where password='$password' AND username='$username'", $connection);
-$rows = mysqli_num_rows($query);
-if ($rows == 1) {
+$result = mysqli_query($connection, "select * from login where password='$password' AND username='$username'");
 
+$rows = mysqli_num_rows($result);
+
+if ($rows == 1) {
 $_SESSION['login_user']=$username; // Initializing Session(setting the session variable)
 header("location: profile.php"); // Redirecting To Other Page
-} else {
+} 
+
+else {
 $error = "Username or Password is invalid";
 }
 mysqli_close($connection); // Closing Connection
