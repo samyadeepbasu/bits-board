@@ -1,0 +1,151 @@
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Upload|BITS|Online Notice Board</title>
+   <meta name="description" content="An online notice board for helping the students of BITS">
+   <meta name="author" content="BITS">
+   <meta http-equiv="content-language" content="en" />
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+  @import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
+body{
+   background: url(login-background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+
+}
+.header h1{
+ text-align:center;
+ font-size:80px;
+ font-weight:300;
+ color:#CDD0D4;
+ text-shadow:0 2px 1px; 
+}
+
+.upload{
+text-align:center;
+background-color:#f7f7f7;
+width:500px;
+margin:50px auto;
+padding:40px;
+border-radius:4px;
+box-shadow:0 3px 2px rgba(0,0,0,0.3);
+}
+.upload h1{
+font-size:55px;
+font-weight:300;
+}
+.upload input[type=text]{
+width:100%;
+margin-bottom:10px;
+height:40px;
+
+text-shadow:0 1px rgba(0,0,0,0.1);
+font-size:20px;
+font-family:Roboto;
+font-weight:100;
+}
+
+#fileupload{
+  margin-top:20px;
+  margin-bottom:40px;
+  width:100%;
+  
+  
+
+}
+
+.upload h2{
+ font-weight:200;
+
+}
+.upload input[type=submit]{
+width:100%;
+cursor:pointer;
+position:relative;
+display:block;
+color:#fff;
+background-color:#4DA6FF;
+text-shadow:0 1px rgba(0,0,0,0.1);
+font-size:25px;
+font-family:Roboto;
+border:0px;
+height:40px;
+font-weight:300;
+
+
+}
+
+.upload input[type=submit]:hover{
+background-color:#0681FD;
+}
+
+.upload h3{
+font-weight:100;
+color:red;
+
+}
+</style>
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#datepicker").datepicker();
+  });
+  
+  </script>
+  <script type="text/javascript">
+     
+	 function validate()
+	 {
+	   var x=document.forms["myform"]["eventname"].value;
+	   var y=document.forms["myform"]["eventvenue"].value;
+       var z=document.forms["myform"]["date"].value;
+	   var m=document.forms["myform"]["fileupload"].value;
+
+		
+	   if(x==null || x=="" || y==null || y=="" || z==null || z=="" || m==null || m=="")
+	   {
+	      document.getElementById("notfilled").innerHTML="X Please Fill out all the boxes"
+	      return false;
+	   }
+	  
+	  else
+	  {
+	    return true;
+	  
+	  }
+	   
+	 
+	 }
+  </script>
+ </head>
+<body>
+  <div class="header">
+    <h1>Welcome.</h1>  
+  </div>
+  
+  <div class="upload">
+      <h1>Upload Form</h1>
+	  <form name="myform" action="#" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+	     <input type="text" name="eventname" id="text"placeholder="Event Name" />
+		 <input type="text" name="eventvenue" id="text" placeholder="Event Venue" />
+		 <input type="text" name="date" id="datepicker" id="text" placeholder="Select Date" />
+		 <h2>Choose your poster</h2>
+		 <input type="file" name="fileupload" id="fileupload" value="Upload Poster" />
+		 <input type="submit" value="Upload" name="submit" id="submit" />
+		 
+		 <h2><a href="#" style="text-decoration:none;color:gray;">Logout</a></h2>
+		 <h3 id="notfilled"></h3>
+		 
+	  </form>
+  
+  </div>
+</body>
+
+</html>

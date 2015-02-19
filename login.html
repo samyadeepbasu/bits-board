@@ -1,0 +1,141 @@
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Admin Login|BITS|Online Notice Board</title>
+   <meta name="description" content="An online notice board for helping the students of BITS">
+   <meta name="author" content="BITS">
+   <meta http-equiv="content-language" content="en" />
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+  @import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
+  body {
+  background: url(login-background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+.login{
+width:400px;
+background-color:#f7f7f7;
+padding:40px;
+border-radius:4px;
+overflow:hidden;
+margin: 50px auto;
+box-shadow: 0px 2px 2px rgba(0,0,0,0.3)
+
+
+}
+
+.login h1{
+text-align:center;
+font-weight:100;
+font-size:50px;
+
+}
+
+.login input[type=submit]{
+width:100%;
+cursor:pointer;
+position:relative;
+display:block;
+color:#fff;
+background-color:#4DA6FF;
+text-shadow:0 1px rgba(0,0,0,0.1);
+font-size:25px;
+font-family:Roboto;
+border:0px;
+height:40px;
+font-weight:300;
+
+
+}
+.login input[type=submit]:hover
+{
+background-color:#0681FD;
+
+}
+.login 
+.forgetpass{
+font-size:15px;
+text-align:center;
+
+}
+.login a{
+text-decoration:none;
+color:#666;
+font-weight:400;
+text-align:center;
+opacity:0.6;
+transition:opacity ease 0.5s;
+
+}
+
+.login input[type=text],input[type=password]{
+   height:50px;
+   font-size:18px;
+   width:100%;
+   margin-bottom:10px;
+   font-weight:100;
+   
+   
+
+}
+.pilani{
+font-family:Roboto,sans-serif;
+font-size:100px;
+font-weight:300;
+text-align:center;
+color:#CDD0D4;
+text-shadow:0 1px 2px
+
+}
+
+</style>
+<script type="text/javascript">
+function validate()
+{
+  var x=document.forms["myform"]["user"].value;
+  var y=document.forms["myform"]["pass"].value;
+  if(x==null || x=="" || y==null || y=="")
+  {
+     document.getElementById("wrong").innerHTML="X Please fill out both the boxes";
+	 return false;
+  }
+  else
+  {
+    return true;
+  }
+  }
+</script>
+</head>
+<body>
+  <div class="login">
+     <h1>Admin Login</h1>
+	 <form name="myform" action="#" method="post" onsubmit="return validate()">
+	     <input type="text" name="user" placeholder="Username">
+		 <input type="password" name="pass" placeholder="Password">
+		 <input type="submit" name="login" value="Login" class="loginsub">
+		 
+	 </form>
+	 
+	 <div class="loginhelp">
+	   <a href="#" class="forgetpass">Forgot Password</a>
+	 </div>
+	 <h3  id="wrong"style="text-align:center;font-weight:100;color:red;"></h3>
+  
+  </div>
+  <br /><br />
+ <div class="pilani">
+ BITS Pilani.
+
+ </div> 
+
+</body>
+
+
+</html>
