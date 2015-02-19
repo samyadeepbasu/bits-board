@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>BITS|Online Notice Board</title>
+   <meta name="description" content="An online notice board for helping the students of BITS">
+   <meta name="author" content="BITS">
+   <meta http-equiv="content-language" content="en" />
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
+body{
+background: url(login-background.jpg) no-repeat center center fixed; 
+box-shadow: 0px 2px 2px rgba(0,0,0,0.3)
+
+
+}
+#info1 img:hover{
+ opacity:0.7;
+ transition:2s ease;
+}
+.items-wrap .gallery-items{position:relative;margin-bottom: 2em;display: block;overflow: hidden;}
+.items-wrap .gallery-items:hover img{-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-ms-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
+.items-wrap .gallery-items .caption{position: absolute;top: 0;right: 0;left: 0; bottom: 0;background: rgba(0,0,0,0.8);text-align: center;opacity:0;color: #fff;}
+.items-wrap .gallery-items .caption h3{margin-top:-27%;margin-bottom: 1em;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-ms-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
+.items-wrap .gallery-items .caption:hover h3{margin-top: 27%;}
+.items-wrap .gallery-items:hover .caption{opacity:1;-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-ms-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
+.btn-default{border:none;border-radius: 0;background: #5E9A18 !important;color:#fff !important;font-size: 0.85em;padding:0.5em 1em;}
+.btn-default:hover{background: #487712 !important;padding:0.5em 2em; }
+
+
+</style>
+<link rel="stylesheet" href="blueimp-gallery.min.css">
+
+<!-- Lightbox -->
+
+<script src="http://cdn.rawgit.com/noelboss/featherlight/1.0.4/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<link href="http://cdn.rawgit.com/noelboss/featherlight/1.0.4/release/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+     <div class="navbar-header">
+	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+	  <a class="navbar-brand" href="#">BITSBoard</a>
+
+	 </div>
+	<div class="collapse navbar-collapse" id="myNavbar">
+	   <ul class="nav navbar-nav">
+	      <li class="active"><a href="notice.html">Home</a>
+		</ul>  
+		   <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-featherlight="<h1 style='font-family:Roboto;text-align:center;font-weight:100;'>Complaint Box</h1><br /><textarea style='width:100%;height:100px;font-family:Roboto;' placeholder='Please put your complaint'/></textarea><br /><input type='text' placeholder='Suggested solution?' style='font-family:Roboto;width:100%;'/><br /><button style='width:100%;cursor:pointer;color:#fff;background-color:#4DA6FF;text-shadow:0 1px rgba(0,0,0,0.1);font-weight:100;height:40px;border:0px;font-size:25px;font-family:Roboto;'>Submit</button><br />"><span class="glyphicon glyphicon-comment"></span> Complaint Box</a></li>
+<!--         <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+ --><!--		<li><a href="#" data-featherlight="<h1 style='font-family:Roboto;font-weight:100;text-align:center;'>Contact</h1><br /><span style='font-family:Roboto;font-size:200%;text-align:center;color:#C0C0C0;'>Reddy Kumara Simha</span><br /><span style='text-align:center;font-family:Roboto;font-weight:100;font-size:170%;'> +918890605392</span><br />" class="cd-btn"><span class="glyphicon glyphicon-user"></span> Contact</a></li>-->
+<!--		<li><a href="#contri"><span class="glyphicon glyphicon-user"></span> Contributors</a></li>-->
+
+
+      </ul>
+
+	   
+	
+    </div>	
+  </div>
+</nav><br /><br /><br />
+
+
+
+<div class="container">
+
+  <div class="jumbotron">
+    <h1 style="font-weight:100;">Presenting the BITSBoard beta!</h1>      
+          
+    <a href="/login/index.php" style="box-shadow:0 2px 2px rgba(0,0,0,0.3);"class="btn btn-info btn-lg"><span class="glyphicon glyphicon-login"></span>Member Login</a>
+  </div>
+  
+  <!-- <div class="row">
+     <div class="col-sm-3" style="border-radius:10px;">
+	   
+          <div id="info1" style="width:100%;">
+               <img src="logocon.jpg" style="cursor:pointer;"/>
+
+          </div>		  
+	    
+	</div> 
+	<div class="col-sm-6">
+	</div>
+    <div class="col-sm-3" style="border:1.5px solid black;border-radius:4px;">
+	 <h2 style="font-family:Roboto,sans-serif;font-weight:100;text-align:center;">News Feed</h2><br />
+	 <h4 style="font-family:Roboto;font-weight:100;">Laundromat operation will start from 12 feb</h4>
+	 <h4 style="font-family:Roboto;font-weight:100;">India vs Pakistan match screening at Audi.</h4>
+
+	</div>  
+  </div><br />
+  
+  
+   <ul class="pagination">
+    <li class="active"><a href="#" style="text-decoration:none;color:white;background-color:black;">1</a></li>
+    <li><a href="#" style="text-decoration:none;color:black;">2</a></li>
+    <li><a href="#" style="text-decoration:none;color:black">3</a></li>
+   
+  </ul>
+</div>  -->
+
+
+<section class="items-wrap">
+			<div class="container">
+				<div class="spacer">
+				<div class="row">
+					<div class="col-sm-4 fadeInUp wowload">
+						<div class="gallery-items">
+						<img class="img-responsive" src="logocon.jpg" style="" alt="item01"/>						
+						<div class="caption"><h3 style="font-family:Roboto;font-weight:100;">Centre for Entrepreneurial Leadership<br />Venue:Event Over</h3> <a href="logocon.jpg" title="Logocon by CEL" class="gallery-image btn btn-default" data-gallery>View Details</a></div>
+						</div>
+					</div>
+
+					<div class="col-sm-4 fadeInUp wowload">
+						<div class="gallery-items">
+						<img class="img-responsive" src="codenite.png"  style="" alt="item01"/>						
+						<div class="caption"><h3 style="font-family:Roboto;font-weight:100;">Computer Science Association<br />Venue:Event Over</h3> <a href="codenite.png" title="Codenite by CSA" class="gallery-image btn btn-default" data-gallery>View Details</a></div>
+						</div>
+					</div>
+
+					<div class="col-sm-4 fadeInUp wowload">
+						<div class="gallery-items">
+						<img class="img-responsive" src="art.jpg" style="" alt="item01"/>						
+						<div class="caption"><h3 style="font-family:Roboto;font-weight:100;" >Computer Science Association<br />Venue:Event Over</h3> <a href="art.jpg" title="Alumni Research Talk by CSA" class="gallery-image btn btn-default" data-gallery>View Details</a></div>
+						</div>
+					</div>
+					
+					<div class="col-sm-4 fadeInUp wowload">
+						<div class="gallery-items">
+						<img class="img-responsive" src="Hedge.jpg" style="" alt="item01"/>						
+						<div class="caption"><h3 style="font-family:Roboto;font-weight:100;" >Sponsorship and Marketing<br />Venue:LTC</h3> <a href="Hedge.jpg" title="Finance Workshop" class="gallery-image btn btn-default" data-gallery>View Details</a></div>
+						</div>
+					</div>
+					
+					
+					<div class="col-sm-4 fadeInUp wowload">
+						<div class="gallery-items">
+						<img class="img-responsive" src="Automobile.jpg" style="" alt="item01"/>						
+						<div class="caption"><h3 style="font-family:Roboto;font-weight:100;" >Sponsorship and Marketing<br />Venue:LTC</h3> <a href="Automobile.jpg" title="Automobile Workshop signing" class="gallery-image btn btn-default" data-gallery>View Details</a></div>
+						</div>
+					</div>
+					
+					<div class="col-sm-4 fadeInUp wowload">
+						<div class="gallery-items">
+						<img class="img-responsive" src="notice1.jpg" style="" alt="item01"/>						
+						<div class="caption"><h3 style="font-family:Roboto;font-weight:100;" >Marudhara Regional Association<br />Venue:LTC</h3> <a href="notice1.jpg" title="Grub by Marudhara" class="gallery-image btn btn-default" data-gallery>View Details</a></div>
+						</div>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="items-wrap">
+			<div class="container">
+				<div class="spacer">
+				    <div class="row">
+					   <div class="col-sm-4 fadeInUp wowload">
+						<div class="gallery-items">
+						<img class="img-responsive" src="stock.jpg" style="" alt="item01"/>						
+						<div class="caption"><h3 style="font-family:Roboto;font-weight:100;" >Stock Market Simulation<br />Venue:Online</h3> <a href="stock.jpg" title="Stock Market Simulation" class="gallery-image btn btn-default" data-gallery>View Details</a></div>
+						</div>
+					   </div>
+					   
+					   
+					   <div class="col-sm-4 fadeInUp wowload">
+						<div class="gallery-items">
+						<img class="img-responsive" src="apogee.jpg" style="" alt="item01"/>						
+						<div class="caption"><h3 style="font-family:Roboto;font-weight:100;" >Apogee-2k15<br />Venue:Campus</h3> <a href="apogee.jpg" title="Apogee 2015" class="gallery-image btn btn-default" data-gallery>View Details</a></div>
+						</div>
+					   </div>
+					   
+					   
+					   <div class="col-sm-4 fadeInUp wowload">
+						<div class="gallery-items">
+						<img class="img-responsive" src="dhiti.jpg" style="" alt="item01"/>						
+						<div class="caption"><h3 style="font-family:Roboto;font-weight:100;" >NSS and Nirmaan<br />Venue:Campus</h3> <a href="apogee.jpg" title="Dhiti by NSS and Nirmaan" class="gallery-image btn btn-default" data-gallery>View Details</a></div>
+						</div>
+					   </div>
+					
+					</div>
+                </div>
+            </div>
+	</section>		
+<br /><br />
+  <div class="row" style="text-align:center;background-color:#F0F0F0;opacity:0.6;border-radius:5px;">
+          <br />
+		  <img src="reddy.jpg" id="reddy"  style="border-radius:5px;cursor:pointer;" /><br /><br />
+		  <span style="border-radius:6px;font-family:Roboto;font-weight:100;font-size:20px;">Reddy Kumara Simha</span>
+		  <br />
+		  <span style="font-family:Roboto;cursor:pointer;font-size:20px;color:#C0C0C0;">+918890605392</span>
+          <br /><br />
+  </div>
+ <br />
+ <footer style="border-radius:4px;color:#f7f7f7;font-family:Roboto;font-weight:100;text-align:center;">
+      BITSBoard-2015
+ </footer>
+			<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    
+    <div class="slides"></div>
+    
+    <h3 class="title">title</h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+</div>
+
+		
+
+
+<script src="jquery.blueimp-gallery.min.js"></script>
+
+</body>
+
+
+</html>
